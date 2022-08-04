@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Detalle</title>
+</head>
+<body>
+
+<div action="#" th:action="@{/verDetalle/{id}}"
+      method="get" />
+<div>
+
+        <h1>
+          Detalles de:
+          <span th:text="${nombre}">Nombre</span>
+          <span th:text="${apellido}">Apellido</span>
+        </h1>
+        <table>
+        <p th:text="${fechaNacimiento}">Fecha de Nacimiento</p>
+        <p th:text="${categoria}">Categoría</p>
+        <p th:text="${posicion}">Posición</p>
+        <p th:text="${estatura}">Estatura</p>
+        <p th:text="${peso}">Peso</p>
+        <p th:text="${imc}">IMC</p>
+        <p th:text="${direccion}">Dirección</p><p th:text="${provincia}">Fecha de Nacimiento</p>
+       </table>
+        <a th:href="@{/actualizar/{id}(id= ${id})}">Actualizar </a>
+</div>
+</form>
+</body>
+</html>

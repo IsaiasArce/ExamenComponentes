@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"></meta>
+  <meta http-equiv="Content-Type" content="text/html"></meta>
+  <title>Jugadores</title>
+</head>
+<body>
+Insertar:
+<form action="#" th:action="@{/insertar}" th:object="${jugador}" method="post">
+  <label for="name">Nombre</label>
+  <input type="text" th:field="*{nombre}" id="name">
+  <label for="apellido">Apellido</label>
+  <input type="text" th:field="*{apellido}" id="apellido">
+  <label for="fechaNacimiento">Fecha de Nacimiento</label>
+  <input type="date" th:field="*{fechaNacimiento}" id="fechaNacimiento">
+  <label for="posicion">Posición</label>
+  <input type="text" th:field="*{posicion}" id="posicion">
+  <label for="estatura">Estatura(m)</label>
+  <input type="number" step="any" th:field="*{estatura}" id="estatura">
+  <label for="peso">Peso(kg)</label>
+  <input type="number" step="any" th:field="*{peso}" id="peso">
+  <label for="categoria">Categoría</label>
+  <input type="text" th:field="*{categoria}" id="categoria">
+  <label for="direccion">Dirección</label>
+  <input type="text" th:field="*{direccion}" id="direccion">
+  <label for="provincia">Provincia</label>
+  <input type="text" th:field="*{provincia}" id="provincia">
+  <label for="canton">Canton</label>
+  <input type="text" th:field="*{canton}" id="canton">
+  <label for="distrito">Distrito</label>
+  <input type="text" th:field="*{distrito}" id="distrito">
+  <label for="telefono">Telefono</label>
+  <input type="text" th:field="*{telefono}" id="telefono">
+  <label for="email">Distrito</label>
+  <input type="text" th:field="*{email}" id="email">
+  <input type="submit" value="Add Jugador">
+</form>
+
+</body>
+</html>
